@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <%- include('../sections/head'); %>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <main>
+        <div class="container">
+            <%- include ('../sections/menu'); %>
+            <h1>Productos EJS</h1>
+
+            <div class="row mt-5">
+                <div class="col-2"></div>
+                <div class="col-8">
+                    <form action="/guardarProducto" method="post">
+                        <div class="card">
+                            <div class="card-header">
+                                <h1>Insertar Producto</h1>
+                            </div>
+                            <div class="card-body">
+                                <input type="text" class="form-control"
+                                    name="nombreProducto" id="nombreProducto"
+                                    placeholder="Nombre del producto"/>
+                                    
+                                <input type="text" class="form-control"
+                                    name="marcaProducto" id="marcaProducto"
+                                    placeholder="Marca del producto"/>
+                                <input type="text" class="form-control"
+                                    name="precioProducto" id="precioProducto"
+                                    placeholder="Precio del producto"/>
+                            </div>
+
+                            <div class="card-footer">
+                                <a class="btn btn-secondary"
+                                    href="/listarProductos">Cancelar</a>
+                                <button class="btn btn-primary" type="submit">
+                                    Guardar Producto
+                                </button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+    <footer class="footer mt-auto py-3 bg-light">
+        <%- include('../sections/footer'); %>
+    </footer>
+</body>
+</html>
